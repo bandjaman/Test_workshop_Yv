@@ -2,15 +2,16 @@ name: Hello World Training Workflow
 
 on:
   workflow_dispatch:
-
+  issues:
+    types: [opened, edited]
 jobs:
   greet:
     env:
-        MY_ENV: "John Doe"
+        MY_ENV: "Bugs Bunny"
     runs-on: ubuntu-latest
     steps:
       - name: Greet the User
-        run: echo "Hello World!"
+        run: echo "Hello Welt!"
       # List all files in the current directory for comparison before and after actions/checkout@v2.
       - run: ls -l
       - uses: actions/checkout@v2
